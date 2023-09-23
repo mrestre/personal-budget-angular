@@ -12,8 +12,8 @@
     <meta name="author" content="Fabio Nolasco">
 
     <title>Personal Budget</title>
-    <link rel="stylesheet" href="/reset.css">
-    <link rel="stylesheet" href="/main.css">
+    <link rel="stylesheet" href="/public/reset.css">
+    <link rel="stylesheet" href="/public/main.css">
 </head>
 <body>
 
@@ -144,7 +144,7 @@
 
 //gets budget data from json file
 function getBudget() {
-    axios.get('/budget')
+    axios.get('http://localhost:3000/budget')
     .then(function (res) {
         console.log(res.data);
         for (var i = 0; i < res.data.myBudget.length; i++) {
